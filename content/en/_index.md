@@ -7,4 +7,4 @@ This is the landing page.
 
 ## 2026 - January
 
-- [Welcome](2026/01/26/welcome/index.md)
+- [Welcome](2026/01/26/welcome/)
