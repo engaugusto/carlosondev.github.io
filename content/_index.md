@@ -1,17 +1,10 @@
 ---
-title: My Site
+title: Carlos on Dev
 toc: false
 ---
 
 This is the landing page.
 
-## Explore
+## 2026 - January
 
-{{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
-{{< /cards >}}
-
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra).
+- [Welcome](2026/01/26/welcome/index.md)
