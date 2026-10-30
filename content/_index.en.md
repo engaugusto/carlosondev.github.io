@@ -29,7 +29,7 @@ title: "Carlos on Dev"
 <section class="cod-index-month" aria-labelledby="cod-month-2026-10">
 <div class="cod-index-month__header">
 <h2 id="cod-month-2026-10">October 2026</h2>
-<span>1 article</span>
+<span>2 articles</span>
 </div>
 <div class="cod-index-month__posts">
 <article class="cod-index-row" title="Hugo + Hextra on Netlify, three languages, and every tool and task driven by mise — modelled on Fabio Akita&#x27;s blog, with Python instead of Ruby.">
@@ -40,19 +40,11 @@ title: "Carlos on Dev"
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/en/tags/blog/">#blog</a><a class="cod-tag-link" href="/en/tags/software-development/">#software-development</a></span>
 </article>
-</div>
-</section>
-<section class="cod-index-month" aria-labelledby="cod-month-2026-01">
-<div class="cod-index-month__header">
-<h2 id="cod-month-2026-01">January 2026</h2>
-<span>1 article</span>
-</div>
-<div class="cod-index-month__posts">
-<article class="cod-index-row" title="Why I started this website: thinking out loud about IT and business, sharing what I&#x27;ve learned, and meeting people along the way.">
-<time datetime="2026-01-26"><span class="cod-row-date">Jan 26</span><span class="cod-card-date">Jan 26, 2026</span></time>
+<article class="cod-index-row" title="First post: who I am, why I made this website, and what I&#x27;m going to write about here.">
+<time datetime="2026-10-30"><span class="cod-row-date">Oct 30</span><span class="cod-card-date">Oct 30, 2026</span></time>
 <div class="cod-index-row__body">
-<h3><a class="cod-index-row__link" href="/en/2026/01/26/welcome/">Welcome</a></h3>
-<p>Why I started this website: thinking out loud about IT and business, sharing what I&#x27;ve learned, and meeting people along the way.</p>
+<h3><a class="cod-index-row__link" href="/en/2026/10/30/hello-world/">Hello World!</a></h3>
+<p>First post: who I am, why I made this website, and what I&#x27;m going to write about here.</p>
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/en/tags/personal/">#personal</a><a class="cod-tag-link" href="/en/tags/blog/">#blog</a></span>
 </article>

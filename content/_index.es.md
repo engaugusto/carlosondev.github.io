@@ -29,7 +29,7 @@ title: "Carlos on Dev"
 <section class="cod-index-month" aria-labelledby="cod-month-2026-10">
 <div class="cod-index-month__header">
 <h2 id="cod-month-2026-10">octubre 2026</h2>
-<span>1 artículo</span>
+<span>2 artículos</span>
 </div>
 <div class="cod-index-month__posts">
 <article class="cod-index-row" title="Hugo + Hextra en Netlify, tres idiomas y todas las herramientas y tareas gestionadas con mise — basada en el blog de Fabio Akita, con Python en lugar de Ruby.">
@@ -40,19 +40,11 @@ title: "Carlos on Dev"
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/es/tags/blog/">#blog</a><a class="cod-tag-link" href="/es/tags/desarrollo-de-software/">#desarrollo-de-software</a></span>
 </article>
-</div>
-</section>
-<section class="cod-index-month" aria-labelledby="cod-month-2026-01">
-<div class="cod-index-month__header">
-<h2 id="cod-month-2026-01">enero 2026</h2>
-<span>1 artículo</span>
-</div>
-<div class="cod-index-month__posts">
-<article class="cod-index-row" title="Por qué he creado esta web: pensar en voz alta sobre tecnología y negocios, compartir lo que he aprendido y conocer gente por el camino.">
-<time datetime="2026-01-26"><span class="cod-row-date">26 ene</span><span class="cod-card-date">26 ene 2026</span></time>
+<article class="cod-index-row" title="Primera entrada: quién soy, por qué he hecho esta web y de qué voy a escribir aquí.">
+<time datetime="2026-10-30"><span class="cod-row-date">30 oct</span><span class="cod-card-date">30 oct 2026</span></time>
 <div class="cod-index-row__body">
-<h3><a class="cod-index-row__link" href="/es/2026/01/26/bienvenidos/">Bienvenidos</a></h3>
-<p>Por qué he creado esta web: pensar en voz alta sobre tecnología y negocios, compartir lo que he aprendido y conocer gente por el camino.</p>
+<h3><a class="cod-index-row__link" href="/es/2026/10/30/hola-mundo/">¡Hola, mundo!</a></h3>
+<p>Primera entrada: quién soy, por qué he hecho esta web y de qué voy a escribir aquí.</p>
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/es/tags/personal/">#personal</a><a class="cod-tag-link" href="/es/tags/blog/">#blog</a></span>
 </article>

@@ -29,7 +29,7 @@ title: "Carlos on Dev"
 <section class="cod-index-month" aria-labelledby="cod-month-2026-10">
 <div class="cod-index-month__header">
 <h2 id="cod-month-2026-10">outubro 2026</h2>
-<span>1 artigo</span>
+<span>2 artigos</span>
 </div>
 <div class="cod-index-month__posts">
 <article class="cod-index-row" title="Hugo + Hextra na Netlify, três idiomas e todas as ferramentas e tarefas controladas pelo mise — baseado no blog do Fabio Akita, com Python no lugar de Ruby.">
@@ -40,19 +40,11 @@ title: "Carlos on Dev"
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/pt-br/tags/blog/">#blog</a><a class="cod-tag-link" href="/pt-br/tags/desenvolvimento-de-software/">#desenvolvimento-de-software</a></span>
 </article>
-</div>
-</section>
-<section class="cod-index-month" aria-labelledby="cod-month-2026-01">
-<div class="cod-index-month__header">
-<h2 id="cod-month-2026-01">janeiro 2026</h2>
-<span>1 artigo</span>
-</div>
-<div class="cod-index-month__posts">
-<article class="cod-index-row" title="Por que criei este site: pensar em voz alta sobre TI e negócios, compartilhar o que aprendi e conhecer pessoas pelo caminho.">
-<time datetime="2026-01-26"><span class="cod-row-date">26/01</span><span class="cod-card-date">26/01/2026</span></time>
+<article class="cod-index-row" title="Primeiro post: quem eu sou, por que fiz este site e sobre o que vou escrever aqui.">
+<time datetime="2026-10-30"><span class="cod-row-date">30/10</span><span class="cod-card-date">30/10/2026</span></time>
 <div class="cod-index-row__body">
-<h3><a class="cod-index-row__link" href="/pt-br/2026/01/26/bem-vindos/">Bem-vindos</a></h3>
-<p>Por que criei este site: pensar em voz alta sobre TI e negócios, compartilhar o que aprendi e conhecer pessoas pelo caminho.</p>
+<h3><a class="cod-index-row__link" href="/pt-br/2026/10/30/ola-mundo/">Olá, mundo!</a></h3>
+<p>Primeiro post: quem eu sou, por que fiz este site e sobre o que vou escrever aqui.</p>
 </div>
 <span class="cod-post-tags cod-post-tags--row"><a class="cod-tag-link" href="/pt-br/tags/pessoal/">#pessoal</a><a class="cod-tag-link" href="/pt-br/tags/blog/">#blog</a></span>
 </article>

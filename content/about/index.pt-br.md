@@ -1,146 +1,45 @@
 ---
 title: "Sobre mim"
-description: "Carlos Augusto — Diretor Global de Inteligência Artificial, Cibersegurança e Inovação SAP."
+description: "Carlos Augusto: diretor de IA na Stefanini, ex-engenheiro de meios de pagamento e alguém que gosta de construir coisas que rodam em produção."
 toc: false
 ---
 
-## Oi, eu sou o Carlos Augusto 👋
+Oi, eu sou o Carlos Augusto 👋
 
-Sou **Diretor Global de Inteligência Artificial, Cibersegurança e Inovação SAP**, focado em transformar ambientes corporativos complexos em soluções digitais práticas, escaláveis e seguras.
+Eu ajudo a levar a IA para o mundo real. Essa é a minha frase no LinkedIn, e também o jeito mais curto de explicar o que eu faço.
 
-Com mais de **18 anos de experiência na indústria de TI**, ajudo organizações a fechar a lacuna entre **estratégia e execução** — transformando tecnologias emergentes como IA, automação e plataformas de dados em resultados reais de negócio.
+Hoje eu lidero Inteligência Artificial e Machine Learning na Stefanini para a América do Norte e APAC, aqui de Michigan. Meu trabalho é tirar a IA dos slides e colocar dentro da operação de verdade: IA generativa e LLMs, automação de aplicações e ERPs como o SAP, dados e analytics. Tem dia que estou com cliente desenhando a solução, tem dia que estou com o time construindo, e tem dia que sou eu garantindo que nada quebre.
 
-Meu trabalho fica na interseção de:
+## De onde eu venho
 
-- 🤖 Inteligência Artificial e Automação
-- 🏢 Sistemas Corporativos (SAP, S/4HANA, AMS)
-- 🔐 Cibersegurança e Risco
-- 📊 Estratégia de Dados e Analytics
-- 🚀 Inovação Tecnológica e Transformação Digital
+Comecei como desenvolvedor em São Paulo, trabalhando com sistemas de pagamento para adquirentes e emissores como Rede, Itaú e Alelo. Captura, autorização, processamento, liquidação: trabalhei no fluxo inteiro de uma transação de cartão por mais de dez anos.
 
-Não acredito em tecnologia pela tecnologia.
-Acredito em **tecnologia que resolve problemas reais**.
+Depois virei consultor e arquiteto de soluções, e em seguida gerente de TI e arquiteto de software na EcommIT, liderando vários times que mantinham operações financeiras críticas rodando. Eu era a última "barreira" quando um problema não tinha dono. Mesmo às 3 da manhã.
 
----
+Em 2020 também virei sócio de uma clínica online, onde cuidava de marketing e tecnologia. Isso me ensinou uma coisa que nenhum diagrama de arquitetura ensina: como é quando o dinheiro é seu.
 
-## O que eu faço
+Em 2022 cheguei na Stefanini para liderar IA.
 
-Hoje meu foco é **liderar** iniciativas de transformação corporativa que ajudam as organizações a:
+## No que eu acredito
 
-- Desenhar e executar operações de negócio orientadas por IA
-- Construir plataformas de dados que permitam decisões em tempo real baseadas em dados
-- Alinhar a estratégia de tecnologia ao crescimento do negócio e aos objetivos operacionais
-- Automatizar processos complexos para aumentar a produtividade e reduzir o risco operacional
-- Gerar ganhos mensuráveis em eficiência, custo e qualidade de serviço
+- IA tem que ser prática. Se não muda um processo real, é demo.
+- Ideia é barato. O que importa é a execução.
+- Segurança faz parte do desenho, não é algo que se coloca depois.
+- Um bom líder deixa as coisas claras, não complicadas.
 
-Minha trajetória combina de forma única:
+## Com o que eu trabalho
 
-- Desenvolvimento de negócios e planejamento estratégico
-- Arquitetura corporativa e de software
-- Engenharia de produtos e plataformas
-- Operações, suporte e transformação de serviços (SAP AMS)
-- Programas de transformação digital em larga escala
-- Liderança de times globais e multidisciplinares
-
-Essa combinação me permite transitar com naturalidade entre as camadas de negócio, tecnologia e execução — traduzindo a visão executiva em soluções reais e escaláveis.
-
----
-
-## Minha filosofia
-
-Meu lema profissional é simples:
-
-> **“Unir estratégia, tecnologia e execução.”**
-
-Acredito firmemente que:
-- IA precisa ser prática, não teórica
-- Segurança precisa estar embutida desde o início, não ser adicionada depois
-- Inovação precisa gerar valor para o negócio
-- Liderar é trazer clareza, não complexidade
-
-Meu foco é sempre construir soluções que sejam:
-- Escaláveis
-- Seguras
-- Sustentáveis
-- Compreensíveis para os líderes de negócio
-
----
-
-## Destaques da carreira
-
-- Mais de 18 anos nas indústrias de TI e serviços financeiros
-- Entregas globais em vários países
-- Liderança de times multidisciplinares de engenharia e inovação
-- Experiência profunda em SAP (ECC e S/4HANA), IA, desenvolvimento de software, automação e cibersegurança
-- Criador de produtos corporativos e frameworks de transformação digital
-- Mentor e professor em programas corporativos e acadêmicos
-- MBA em Gerenciamento de Projetos
-- Formado em Engenharia da Computação
-
----
-
-## Comunidade e compartilhamento de conhecimento
-
-Sou apaixonado por **ensinar e ser mentor**.
-
-Atuo ativamente para:
-- Mentorar profissionais em tecnologia e liderança
-- Apoiar programas universitários
-- Criar conteúdo sobre IA, sistemas corporativos e estratégia digital
-- Construir comunidades focadas em inovação prática
-- Ajudar profissionais a se prepararem para o futuro do trabalho
-
-Meu objetivo não é só construir sistemas — é formar pessoas.
-
----
-
-## Visão de longo prazo
-
-Meus objetivos de carreira de longo prazo são:
-
-- Impulsionar o crescimento dos negócios por meio da tecnologia
-- Liderar programas globais de transformação
-- Construir organizações digitais resilientes
-- Moldar uma adoção responsável de IA
-- Gerar valor de longo prazo para as empresas e a sociedade
-
-Vejo a liderança em tecnologia como uma mistura de:
-**estratégia + arquitetura + pessoas + execução**.
-
----
+LLMs (OpenAI, Gemini, Claude, Llama, Mistral e outros), Python, C# e Java, LangChain, Hugging Face, Spark, Docker e Kubernetes, UiPath e SAP GUI scripting, AWS e Azure. Gosto de continuar com a mão na massa, do problema até o código rodando em produção.
 
 ## Fora do trabalho
 
-Fora da tecnologia, eu gosto de:
-- Investimentos
-- Filosofia
-- Games :)
-- Estudar cibersegurança e tecnologias emergentes
-- Escrever e criar produtos digitais
-- Ensinar e fazer coaching
-- Projetos de engenharia e faça-você-mesmo
-- Viajar e conhecer outras culturas
+Jiu-Jitsu (faixa azul, e com orgulho 😂), minha família e meus filhos, games, investimentos, filosofia e projetos faça-você-mesmo. Também faço mentoria para quem quer crescer em tecnologia e liderança. Algumas das melhores conversas que eu tenho são essas.
 
-Acredito que a curiosidade é a habilidade mais importante de qualquer líder.
-
----
+Sou formado em Engenharia da Computação e fiz MBA em Gerenciamento de Projetos.
 
 ## Vamos conversar
 
-Se você se interessa por:
-- Criação de negócios
-- Transformação digital
-- Startups
-- IA e automação corporativa
-- Inovação com SAP
-- Desenvolvimento de software
-- Liderança em tecnologia
-- Construção de produtos escaláveis
-- Comunidade e compartilhamento de conhecimento
+Se quiser falar sobre IA, SAP, meios de pagamento, construção de produtos ou carreira, me chama:
 
-Fique à vontade para entrar em contato ou explorar meu trabalho aqui no site.
-
----
-
-**Carlos Augusto**
-*Estratégia de Negócios e IA — Unindo estratégia, tecnologia e execução*
+- LinkedIn: [linkedin.com/in/caugusto](https://www.linkedin.com/in/caugusto/)
+- GitHub: [github.com/engaugusto](https://github.com/engaugusto)
