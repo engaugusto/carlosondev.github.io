@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{- $pages := .Pages.ByDate.Reverse -}}
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+    <article class="cod-page">
+      <main id="content" class="cod-shell">
+        <header class="cod-listing-header">
+          <div>
+            <h1>#{{ .Data.Term }}</h1>
+            <p class="cod-muted">{{ T "postCount" (dict "Count" (len $pages)) }}{{ with partial "utils/tag-description.html" . }} · {{ . }}{{ end }}</p>
+          </div>
+          {{ partial "index-view-toggle.html" (dict "listLabel" (T "listView") "gridLabel" (T "gridView") "groupLabel" (T "postView")) }}
+        </header>
+        <div class="content cod-listing">
+          {{ .Content }}
+          {{ partial "post-list.html" $pages }}
+        </div>
+      </main>
+    </article>
+  </div>
+{{ end }}

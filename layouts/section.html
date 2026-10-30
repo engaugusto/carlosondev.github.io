@@ -1,0 +1,18 @@
+{{/* Sections: /archives/ (generated content) and the automatic year sections
+     (/2026/ ...), which have no _index file and list their posts instead. */}}
+{{ define "main" }}
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+    <article class="cod-page">
+      <main id="content" class="cod-shell">
+        <header class="cod-listing-header">
+          <h1>{{ .Title }}</h1>
+          {{ partial "index-view-toggle.html" (dict "listLabel" (T "listView") "gridLabel" (T "gridView") "groupLabel" (T "postView")) }}
+        </header>
+        <div class="content cod-listing">
+          {{ with .Content }}{{ . }}{{ else }}{{ partial "post-list.html" $.RegularPagesRecursive }}{{ end }}
+        </div>
+      </main>
+    </article>
+  </div>
+{{ end }}

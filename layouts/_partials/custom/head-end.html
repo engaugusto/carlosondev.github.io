@@ -1,0 +1,106 @@
+{{/* Injected at the end of <head> by Hextra. */}}
+
+{{/* hreflang alternates for every translation of this page. */}}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Language.Lang }}" href="{{ .Permalink }}" />
+{{- end }}
+{{- if .IsHome }}
+<link rel="alternate" hreflang="x-default" href="{{ site.BaseURL }}" />
+{{- end }}
+
+{{/* Structured data for posts (also used by tests/test_site.py to check RSS dates). */}}
+{{- if partial "utils/is-post.html" . }}
+<script type="application/ld+json">
+{{ dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" (.Description | default (.Summary | plainify))
+  "inLanguage" (.Language.LanguageCode | default .Language.Lang)
+  "datePublished" (.Date.Format "2006-01-02T15:04:05-07:00")
+  "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00")
+  "url" .Permalink
+  "keywords" (delimit (.Params.tags | default slice) ", ")
+  "author" (dict "@type" "Person" "name" site.Params.author.name "url" (absURL "/"))
+  | jsonify | safeJS }}
+</script>
+{{- end }}
+
+{{/* Remember the language the visitor is reading in. Netlify's language
+     redirect on "/" honours the nf_lang cookie before Accept-Language, so an
+     explicit choice made with the language switch wins next time. */}}
+<script>
+  (function () {
+    var lang = {{ .Language.Lang }};
+    var nf = lang.split("-")[0];
+    try {
+      document.cookie = "nf_lang=" + nf + "; path=/; max-age=31536000; SameSite=Lax";
+    } catch (e) {}
+  })();
+</script>
+
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    var root = document.documentElement;
+
+    /* ---- List / grid view (persisted per browser) ------------------------ */
+    var KEY = "cod-index-view";
+    var buttons = document.querySelectorAll("[data-view-button]");
+    function setView(view, persist) {
+      view = view === "grid" ? "grid" : "list";
+      root.setAttribute("data-cod-view", view);
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", b.getAttribute("data-view-button") === view ? "true" : "false");
+      });
+      if (persist) { try { localStorage.setItem(KEY, view); } catch (e) {} }
+    }
+    if (buttons.length) {
+      var saved = "list";
+      try { saved = localStorage.getItem(KEY) || "list"; } catch (e) {}
+      setView(saved, false);
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () { setView(b.getAttribute("data-view-button"), true); });
+      });
+    }
+
+    /* ---- Featured carousel ----------------------------------------------- */
+    document.querySelectorAll("[data-featured-carousel]").forEach(function (box) {
+      var track = box.querySelector(".cod-featured__track");
+      var items = box.querySelectorAll("[data-featured-item]");
+      var counter = box.querySelector(".cod-featured__counter");
+      var prev = box.querySelector("[data-featured-prev]");
+      var next = box.querySelector("[data-featured-next]");
+      if (!track || !items.length) return;
+      function step() { return items[0].getBoundingClientRect().width + 16; }
+      function update() {
+        var perView = Math.max(1, Math.round(track.clientWidth / step()));
+        var first = Math.round(track.scrollLeft / step());
+        var last = Math.min(items.length, first + perView);
+        if (counter) counter.textContent = (first + 1) + "–" + last + " " + counter.dataset.of + " " + items.length;
+        if (prev) prev.disabled = first <= 0;
+        if (next) next.disabled = last >= items.length;
+      }
+      if (prev) prev.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: "smooth" }); });
+      if (next) next.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: "smooth" }); });
+      track.addEventListener("scroll", function () { window.requestAnimationFrame(update); }, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    });
+
+    /* ---- AI TL;DR: right click picks the assistant ----------------------- */
+    var link = document.getElementById("tldr-link");
+    var menu = document.getElementById("tldr-menu");
+    if (link && menu) {
+      function hide() { menu.hidden = true; }
+      link.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        menu.hidden = false;
+        menu.style.left = Math.min(e.clientX, window.innerWidth - menu.offsetWidth - 8) + "px";
+        menu.style.top = Math.min(e.clientY, window.innerHeight - menu.offsetHeight - 8) + "px";
+      });
+      document.addEventListener("click", function (e) { if (!menu.contains(e.target)) hide(); });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });
+      window.addEventListener("scroll", hide, { passive: true });
+    }
+  });
+</script>

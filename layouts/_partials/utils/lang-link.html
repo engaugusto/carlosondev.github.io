@@ -1,0 +1,28 @@
+{{/* Link to the given page in another language (override of Hextra's partial).
+     Tag pages have localized names (e.g. cybersecurity / ciberseguridad), so they
+     are mapped through data/tag_taxonomy.yml. Falls back to that language's home. */}}
+{{- $page := .context -}}
+{{- $lang := .lang -}}
+{{- $link := false -}}
+
+{{- range $page.AllTranslations -}}
+  {{- if eq .Language.Lang $lang -}}{{- $link = .RelPermalink -}}{{- end -}}
+{{- end -}}
+
+{{- if and (not $link) (eq $page.Kind "term") (eq $page.Data.Singular "tag") -}}
+  {{- $from := $page.Language.Lang -}}
+  {{- $term := $page.Data.Term -}}
+  {{- range hugo.Data.tag_taxonomy.tags -}}
+    {{- if eq (index . $from) $term -}}
+      {{- $target := index . $lang -}}
+      {{- range where hugo.Sites ".Language.Lang" $lang -}}
+        {{- with .GetPage (printf "/tags/%s" $target) -}}{{- $link = .RelPermalink -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not $link -}}
+  {{- range where hugo.Sites ".Language.Lang" $lang -}}{{- $link = .Home.RelPermalink -}}{{- end -}}
+{{- end -}}
+{{- return ($link | default site.Home.RelPermalink) -}}

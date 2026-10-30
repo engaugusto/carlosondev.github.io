@@ -1,79 +1,134 @@
-# Hextra Starter Template
+# carlosondev.com
 
-[![Deploy Hugo site to Pages](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml/badge.svg)](https://github.com/imfing/hextra-starter-template/actions/workflows/pages.yaml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6e83fd88-5ffe-4808-9689-c0f3b100bfe3/deploy-status)](https://app.netlify.com/sites/hextra-starter-template/deploys)
-![Vercel Deployment Status](https://img.shields.io/github/deployments/imfing/hextra-starter-template/production?logo=vercel&logoColor=white&label=vercel&labelColor=black&link=https%3A%2F%2Fhextra-starter-template.vercel.app%2F)
+Carlos Augusto's personal website and blog, in **English**, **Español (España)** and **Português (Brasil)**.
 
+Built with [Hugo](https://gohugo.io) and the [Hextra](https://github.com/imfing/hextra) theme, deployed on [Netlify](https://www.netlify.com).
+The structure and workflow follow [akitaonrails/akitaonrails.github.io](https://github.com/akitaonrails/akitaonrails.github.io), with two changes:
 
-🐣 Minimal template for getting started with [Hextra](https://github.com/imfing/hextra)
+- the helper scripts are **Python** instead of Ruby;
+- **[mise](https://mise.jdx.dev)** controls everything — Hugo, Go and Python versions, the Python virtualenv, and every task. Local dev, GitHub Actions and Netlify run the same toolchain.
 
-![hextra-template](https://github.com/imfing/hextra-starter-template/assets/5097752/c403b9a9-a76c-47a6-8466-513d772ef0b7)
+## Quick start
 
-[🌐 Demo ↗](https://imfing.github.io/hextra-starter-template/)
-
-## Quick Start
-
-Use this template to create your own repository:
-
-<img src="https://docs.github.com/assets/cb-77734/mw-1440/images/help/repository/use-this-template-button.webp" width=400 />
-
-You can also quickly start developing using the following online development environment:
-
-- [GitHub Codespaces](https://github.com/codespaces)
-
-    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/imfing/hextra-starter-template)
-
-    Create a new codespace and follow the [Local Development](#local-development) to launch the preview
-
-
-## Deployment
-
-### GitHub Pages
-
-A GitHub Actions workflow is provided in [`.github/workflows/pages.yaml`](./.github/workflows/pages.yaml) to [publish to GitHub Pages](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/) for free. 
-
-For details, see [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
-
-Note: in the settings, make sure to set the Pages deployment source to **GitHub Actions**:
-
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/99676430-884e-42ab-b901-f6534a0d6eee" width=600 />
-
-[Run the workflow manually](https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow) if it's not triggered automatically.
-
-### Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/imfing/hextra-starter-template)
-
-### Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fimfing%2Fhextra-starter-template&env=HUGO_VERSION)
-
-Override the configuration:
-
-<img src="https://github.com/imfing/hextra-starter-template/assets/5097752/e2e3cecd-c884-47ec-b064-14f896fee08d" width=600 />
-
-## Local Development
-
-Pre-requisites: [Hugo](https://gohugo.io/getting-started/installing/), [Go](https://golang.org/doc/install) and [Git](https://git-scm.com)
-
-```shell
-# Clone the repo
-git clone https://github.com/imfing/hextra-starter-template.git
-
-# Change directory
-cd hextra-starter-template
-
-# Start the server
-hugo mod tidy
-hugo server --logLevel debug --disableFastRender -p 1313
+```bash
+curl https://mise.run | sh        # or: brew install mise   (once per machine)
+git clone https://github.com/engaugusto/carlosondev.github.io.git
+cd carlosondev.github.io
+mise install                      # Hugo extended, Go, Python (versions pinned in mise.toml)
+mise run setup                    # Python deps into .venv
+mise run dev                      # http://localhost:1313/en/  /es/  /pt-br/
 ```
 
-### Update theme
+`mise tasks` lists everything:
 
-```shell
-hugo mod get -u
-hugo mod tidy
+| Task | What it does |
+|---|---|
+| `mise run new "Title"` | Create `content/YYYY/MM/DD/<slug>/index.{en,es,pt-br}.md` as drafts (`--slug`, `--lang en,es`, `--date`) |
+| `mise run dev` | Regenerate indexes, serve with drafts and future posts |
+| `mise run dev:drafts` | Same, but drafts are also listed on the home page (don't commit the result) |
+| `mise run index` | Regenerate home + archive pages for every language |
+| `mise run tags:search "query"` | Find existing canonical tags before tagging |
+| `mise run tags:check` | Validate tags and descriptions of all published posts |
+| `mise run tags:catalog` | Rewrite `TAGGING.md` from `data/tag_taxonomy.yml` |
+| `mise run test` | Build into a temp dir and run the site tests |
+| `mise run check` | Everything CI runs: tags, stale-index check, tests, build |
+| `mise run build` | Production build into `public/` |
+| `mise run theme:update` | Update Hextra and re-vendor it into `_vendor/` |
+| `mise run clean` | Remove build output and caches |
+
+## Writing a post
+
+```bash
+mise run new "Why AI projects fail in SAP landscapes"
 ```
 
-See [Update modules](https://gohugo.io/hugo-modules/use-modules/#update-modules) for more details.
+Then, in each of the three files:
 
+1. Translate the `title`; optionally set a translated `slug` (the URL), e.g. `slug: por-que-falham-projetos-de-ia`.
+2. Write a one-sentence `description` — it's the TL;DR shown on the home page and in RSS. Required.
+3. Pick `tags` with `mise run tags:search "ai sap"`. Each language uses its own tag names (`cybersecurity` / `ciberseguridad` / `ciberseguranca`); all translations must map to the same canonical tags.
+4. Optional: `featured: true` puts the post in the home carousel.
+5. Set `draft: false`, run `mise run index`, commit, push.
+
+Images go in the post folder next to the Markdown files: `![diagram](diagram.png)`.
+
+```yaml
+---
+title: "Why AI projects fail in SAP landscapes"
+date: "2026-11-02T09:00:00-05:00"
+slug: why-ai-projects-fail-in-sap-landscapes
+description: "Three patterns I keep seeing, and what to do instead."
+tags:
+- artificial-intelligence
+- sap
+featured: false
+draft: false
+---
+```
+
+URLs follow Akita's pattern: `/en/2026/11/02/why-ai-projects-fail-in-sap-landscapes/`.
+
+## How it is organized
+
+```text
+carlosondev.github.io/
+├── content/
+│   ├── YYYY/MM/DD/<slug>/index.{en,es,pt-br}.md   # posts, one file per language
+│   ├── about/index.{en,es,pt-br}.md
+│   ├── _index.<lang>.md            # home pages      (GENERATED by mise run index)
+│   └── archives/_index.<lang>.md   # archive pages   (GENERATED by mise run index)
+├── data/tag_taxonomy.yml           # canonical tags + per-language names
+├── scripts/
+│   ├── blog.py                     # shared helpers (reads languages from hugo.yaml)
+│   ├── generate_index.py           # ← generate_index.rb
+│   ├── tag_catalog.py              # ← tag_catalog.rb
+│   └── new_post.py                 # ← dev.sh new-post
+├── tests/test_site.py              # ← test_chronological_next.rb, test_rss_dates.rb, test_language_redirects.cjs
+├── layouts/                        # editorial layer over Hextra (home, post, lists, RSS, tags)
+├── assets/css/custom.css           # styles
+├── assets/lib/                     # vendored FlexSearch (no CDN at build time)
+├── i18n/                           # UI strings (pt-br is complete; Hextra only ships pt-PT)
+├── _vendor/                        # vendored Hextra v0.12.3 (builds need no Go/network)
+├── mise.toml                       # tools, venv, tasks
+├── netlify.toml                    # build via mise, cache, language redirects, 404s
+├── .github/workflows/ci.yml        # mise run check on push/PR
+├── TAGGING.md                      # generated tag catalog
+└── hugo.yaml
+```
+
+### Ruby → Python map
+
+| akitaonrails.github.io | here |
+|---|---|
+| `scripts/generate_index.rb` | `scripts/generate_index.py` — any number of languages; featured posts from front matter instead of a hard-coded list; `--check` for CI |
+| `scripts/tag_catalog.rb` | `scripts/tag_catalog.py` — `--search`, `--check`, `--write`; checks tags match across all translations |
+| `scripts/dev.sh` + Docker | `mise.toml` tasks |
+| `scripts/test_*.rb`, `test_*.cjs` | `tests/test_site.py` (unittest) |
+| one-off migration scripts (`fix_*.rb`, `migrate_*.rb`, `backfill_*.rb`) | not needed — there is no legacy content to convert |
+
+### Languages
+
+- Every language has its own prefix: `/en/`, `/es/`, `/pt-br/`.
+- `/` redirects by browser language (Netlify `Language` condition), English fallback.
+- The site sets an `nf_lang` cookie with the language you're reading, so once a visitor picks a language with the switcher, `/` sends them back to it (Netlify honours the cookie before `Accept-Language`).
+- The language switcher maps tag pages too (`/en/tags/personal/` ↔ `/pt-br/tags/pessoal/`).
+- To add a language: add it to `languages:` in `hugo.yaml`, add `i18n/<lang>.yaml`, add strings to `STRINGS` in `scripts/generate_index.py`, add names to every tag in `data/tag_taxonomy.yml`, and a redirect in `netlify.toml`.
+
+## Deploy (Netlify)
+
+One-time setup:
+
+1. Netlify → **Add new site → Import an existing project → GitHub** → `engaugusto/carlosondev.github.io`, branch `main`.
+   Build settings come from `netlify.toml` — leave the UI fields empty.
+2. **Domain management → Add a domain** → `carlosondev.com` (Netlify DNS, or `A @ 75.2.60.5` + `CNAME www <site>.netlify.app` at your registrar). HTTPS is automatic.
+3. Optional: in GitHub → Settings → Pages, set the source to **None** so GitHub Pages doesn't publish a second copy.
+
+Every push to `main` deploys; every pull request gets a deploy preview. GitHub Actions runs `mise run check` on both.
+
+## Comments (optional)
+
+Hextra supports [Giscus](https://giscus.app) (GitHub Discussions): enable Discussions on the repo, get `repoId` / `categoryId` from giscus.app, fill `params.comments` in `hugo.yaml`, set `enable: true`.
+
+## Credits
+
+Structure, workflow and several features (generated month-grouped index, list/grid view, featured carousel, AI TL;DR link, next-post card, tag taxonomy, tests) are adapted from [Fabio Akita's blog](https://github.com/akitaonrails/akitaonrails.github.io). Theme: [Hextra](https://github.com/imfing/hextra) (MIT).

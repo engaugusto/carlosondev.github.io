@@ -1,0 +1,6 @@
+{{/* True for blog posts: pages under content/YYYY/MM/DD/... */}}
+{{- $isPost := false -}}
+{{- if and (eq .Kind "page") .File -}}
+  {{- $isPost = findRE `^\d{4}/\d{2}/\d{2}/` (replace .File.Path "\\" "/") | len | lt 0 -}}
+{{- end -}}
+{{- return $isPost -}}

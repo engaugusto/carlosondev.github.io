@@ -1,0 +1,33 @@
+{{ define "main" }}
+  {{- $isPost := partial "utils/is-post.html" . -}}
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true "displayPlaceholder" true) }}
+    {{ partial "toc.html" . }}
+    <article class="cod-page">
+      <main id="content" class="cod-article">
+        {{ if $isPost }}{{ partial "breadcrumb.html" (dict "page" . "enable" false) }}{{ end }}
+        <header class="cod-article-header">
+          {{ if .Title }}<h1>{{ .Title }}</h1>{{ end }}
+          {{ if $isPost }}
+            {{ with .Params.tags }}<div class="cod-post-tags cod-post-tags--article">{{ partial "tags.html" (dict "context" $) }}</div>{{ end }}
+            <div class="cod-article-meta">
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ partial "utils/format-date" .Date }}</time>
+              <span aria-hidden="true">·</span>
+              <span>{{ T "readingTime" (dict "Count" .ReadingTime) }}</span>
+            </div>
+            {{ partial "custom/tldr-link.html" . }}
+          {{ end }}
+        </header>
+        <div class="content cod-article-content">
+          {{ .Content }}
+        </div>
+        {{ if $isPost }}
+          <div class="cod-article-after">
+            {{ partial "components/chronological-next.html" . }}
+            {{ partial "components/comments.html" . }}
+          </div>
+        {{ end }}
+      </main>
+    </article>
+  </div>
+{{ end }}

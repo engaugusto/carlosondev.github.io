@@ -1,0 +1,30 @@
+{{/* Month-grouped post list. Same markup as scripts/generate_index.py so list
+     and grid views look identical everywhere. Input: a page collection. */}}
+{{- $pages := where . "Kind" "page" -}}
+{{- $short := T "shortDateFormat" | default "Jan 02" -}}
+{{- $long := T "cardDateFormat" | default "Jan 2, 2006" -}}
+<div id="cod-index-list" class="cod-index-list">
+{{- range $pages.GroupByDate "2006-01" "desc" -}}
+  {{- $month := time.AsTime (printf "%s-01" .Key) -}}
+  {{- $id := printf "cod-month-%s" .Key -}}
+  <section class="cod-index-month" aria-labelledby="{{ $id }}">
+    <div class="cod-index-month__header">
+      <h2 id="{{ $id }}">{{ $month | time.Format "January 2006" }}</h2>
+      <span>{{ T "postCount" (dict "Count" (len .Pages)) }}</span>
+    </div>
+    <div class="cod-index-month__posts">
+    {{- range .Pages.ByDate.Reverse -}}
+      {{- $description := .Description | default (.Summary | plainify | truncate 180) -}}
+      <article class="cod-index-row" title="{{ $description }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}"><span class="cod-row-date">{{ .Date | time.Format $short }}</span><span class="cod-card-date">{{ .Date | time.Format $long }}</span></time>
+        <div class="cod-index-row__body">
+          <h3><a class="cod-index-row__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with $description }}<p>{{ . }}</p>{{ end }}
+        </div>
+        {{- if .Params.tags -}}<span class="cod-post-tags cod-post-tags--row">{{ partial "tags.html" (dict "context" .) }}</span>{{- end -}}
+      </article>
+    {{- end -}}
+    </div>
+  </section>
+{{- end -}}
+</div>

@@ -1,0 +1,17 @@
+{{/* Home: renders content/_index.<lang>.md, which scripts/generate_index.py writes. */}}
+{{ define "main" }}
+  <div class="hx:mx-auto hx:flex hextra-max-page-width">
+    {{ partial "sidebar.html" (dict "context" . "disableSidebar" true) }}
+    <article class="cod-page">
+      <main id="content" class="cod-shell cod-home">
+        <header class="cod-hero">
+          <h1>{{ site.Title }}</h1>
+          <p>{{ site.Params.description }}</p>
+        </header>
+        <div class="content cod-listing">
+          {{ .Content }}
+        </div>
+      </main>
+    </article>
+  </div>
+{{ end }}

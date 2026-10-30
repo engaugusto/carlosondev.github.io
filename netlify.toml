@@ -1,6 +1,75 @@
+# Netlify builds with the same mise toolchain as local dev and CI.
 [build]
-publish = "public"
-command = "hugo --gc --minify -b ${DEPLOY_PRIME_URL}"
+  publish = "public"
+  command = """
+    command -v mise >/dev/null || curl -fsSL https://mise.run | sh
+    export PATH="$HOME/.local/bin:$PATH"
+    mise trust && mise install && mise run setup && mise run build
+  """
 
 [build.environment]
-HUGO_VERSION = "0.147.9"
+  MISE_YES = "1"
+  MISE_DATA_DIR = "/opt/build/cache/mise"
+  HUGO_ENV = "production"
+
+# Reuse installed tools and Hugo's processed assets between builds
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = ["/opt/build/cache/mise", ".cache/hugo", "resources/_gen", ".venv"]
+
+[context.deploy-preview.environment]
+  HUGO_ENV = "preview"
+
+# www -> apex
+[[redirects]]
+  from = "https://www.carlosondev.com/*"
+  to = "https://carlosondev.com/:splat"
+  status = 301
+  force = true
+
+# "/" -> visitor's language (Accept-Language), English fallback.
+# The in-page script in layouts/_partials/custom/head-end.html respects an
+# explicit choice made with the language switch.
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pt-br/"
+  status = 302
+  force = true
+  conditions = {Language = ["pt"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
+# Language-specific 404 pages (only used when no file matches)
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/pt-br/*"
+  to = "/pt-br/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/en/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"

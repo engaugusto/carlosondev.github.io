@@ -1,0 +1,110 @@
+# Controlled tag vocabulary. One entry per canonical tag, with the name used in
+# each language (it becomes the URL: /en/tags/<name>/, /es/tags/<name>/ ...).
+#
+#   mise run tags:search "query"   # look before you add
+#   mise run tags:check            # validates every published post
+#   mise run tags:catalog          # regenerates TAGGING.md
+#
+# Names: lowercase, ASCII, words joined by "-". kind: topic (default) | series | project
+tags:
+  artificial_intelligence:
+    en: artificial-intelligence
+    es: inteligencia-artificial
+    pt-br: inteligencia-artificial
+    description: AI in general — strategy, adoption, models and agents.
+    aliases: [ai, ia, llm, llms, genai, agents]
+  automation:
+    en: automation
+    es: automatizacion
+    pt-br: automacao
+    description: Process automation, RPA and AI-driven operations.
+    aliases: [rpa, workflows]
+  sap:
+    en: sap
+    es: sap
+    pt-br: sap
+    description: SAP ECC, S/4HANA, AMS and the SAP ecosystem.
+    aliases: [s4hana, s/4hana, ams, erp]
+  enterprise_systems:
+    en: enterprise-systems
+    es: sistemas-empresariales
+    pt-br: sistemas-corporativos
+    description: ERPs and large enterprise platforms beyond SAP specifically.
+    aliases: [erp, enterprise]
+  cybersecurity:
+    en: cybersecurity
+    es: ciberseguridad
+    pt-br: ciberseguranca
+    description: Security, risk, compliance and defending systems.
+    aliases: [security, seguranca, seguridad, infosec]
+  data:
+    en: data
+    es: datos
+    pt-br: dados
+    description: Data platforms, analytics and data-driven decisions.
+    aliases: [analytics, data-strategy, bi]
+  software_development:
+    en: software-development
+    es: desarrollo-de-software
+    pt-br: desenvolvimento-de-software
+    description: Writing, architecting and shipping software.
+    aliases: [programming, programacao, programacion, coding, architecture]
+  digital_transformation:
+    en: digital-transformation
+    es: transformacion-digital
+    pt-br: transformacao-digital
+    description: Turning technology strategy into organizational change.
+    aliases: [innovation, inovacao, innovacion]
+  leadership:
+    en: leadership
+    es: liderazgo
+    pt-br: lideranca
+    description: Leading teams, management and mentoring.
+    aliases: [management, gestao, gestion, mentoring]
+  career:
+    en: career
+    es: carrera
+    pt-br: carreira
+    description: Careers in tech, learning and the future of work.
+    aliases: [jobs, future-of-work]
+  business:
+    en: business
+    es: negocios
+    pt-br: negocios
+    description: Business creation, strategy, startups and growth.
+    aliases: [startups, strategy, estrategia, entrepreneurship]
+  investing:
+    en: investing
+    es: inversiones
+    pt-br: investimentos
+    description: Personal finance and investing.
+    aliases: [finance, financas, finanzas]
+  philosophy:
+    en: philosophy
+    es: filosofia
+    pt-br: filosofia
+    description: Philosophy and ideas outside day-to-day tech.
+  gaming:
+    en: gaming
+    es: videojuegos
+    pt-br: games
+    description: Video games.
+    aliases: [games, jogos, juegos]
+  diy:
+    en: diy
+    es: bricolaje
+    pt-br: faca-voce-mesmo
+    description: Engineering and DIY side projects.
+    aliases: [maker, hardware]
+  blog:
+    en: blog
+    es: blog
+    pt-br: blog
+    description: Posts about this website and how it is built.
+    aliases: [meta, hugo, website]
+  personal:
+    en: personal
+    es: personal
+    pt-br: pessoal
+    description: Personal notes, announcements and narrative posts.
+    aliases: [narrative, off-topic, life]

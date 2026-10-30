@@ -1,0 +1,23 @@
+# CI: same mise toolchain as local dev and Netlify.
+# Netlify deploys the site; this workflow guards main and pull requests.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: jdx/mise-action@v5
+      - name: Python deps
+        run: mise run setup
+      - name: Tags, generated pages, tests, build
+        run: mise run check

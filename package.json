@@ -1,0 +1,8 @@
+{
+  "name": "carlosondev-hugo",
+  "private": true,
+  "description": "Netlify build plugins for carlosondev.com (Hugo static site).",
+  "devDependencies": {
+    "netlify-plugin-cache": "^1.0.3"
+  }
+}

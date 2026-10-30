@@ -1,0 +1,14 @@
+{{/* "Next post": the next post in time, in the same language. Tested by
+     tests/test_site.py::test_next_post_is_chronological. */}}
+{{- $current := . -}}
+{{- $next := false -}}
+{{- range (where site.RegularPages "Date" "gt" $current.Date).ByDate -}}
+  {{- if and (not $next) (partial "utils/is-post.html" .) -}}{{- $next = . -}}{{- end -}}
+{{- end -}}
+{{- with $next -}}
+  <aside class="cod-next-post hx:print:hidden" aria-label="{{ T "nextPost" }}">
+    <span class="cod-next-post__label">{{ T "nextPost" }}</span>
+    <a class="cod-next-post__link" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  </aside>
+{{- end -}}

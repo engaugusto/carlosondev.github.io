@@ -1,0 +1,8 @@
+{{/* Description of a tag term page, from data/tag_taxonomy.yml */}}
+{{- $term := .Data.Term -}}
+{{- $lang := .Language.Lang -}}
+{{- $desc := "" -}}
+{{- range hugo.Data.tag_taxonomy.tags -}}
+  {{- if eq (index . $lang) $term -}}{{- $desc = .description -}}{{- end -}}
+{{- end -}}
+{{- return $desc -}}

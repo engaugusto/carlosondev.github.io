@@ -1,0 +1,11 @@
+{{- $list := .listLabel | default "List" -}}
+{{- $grid := .gridLabel | default "Grid" -}}
+{{- $group := .groupLabel | default "Post view" -}}
+<div class="cod-view-toggle" role="group" aria-label="{{ $group }}">
+  <button type="button" data-view-button="list" aria-controls="cod-index-list" aria-pressed="true">
+    {{- partial "utils/icon.html" (dict "name" "view-list" "attributes" `height="1em" width="1em" aria-hidden="true"`) -}}<span>{{ $list }}</span>
+  </button>
+  <button type="button" data-view-button="grid" aria-controls="cod-index-list" aria-pressed="false">
+    {{- partial "utils/icon.html" (dict "name" "view-grid" "attributes" `height="1em" width="1em" aria-hidden="true"`) -}}<span>{{ $grid }}</span>
+  </button>
+</div>

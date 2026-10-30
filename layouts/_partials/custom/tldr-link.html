@@ -1,0 +1,18 @@
+{{/* "AI TL;DR": opens the post in Claude (right-click for ChatGPT / Grok)
+     with a prompt in the reader's language. Idea from akitaonrails.com. */}}
+{{- $prompt := printf (T "tldrPrompt") .Permalink -}}
+{{- $q := querify "q" $prompt -}}
+{{- $claude := printf "https://claude.ai/new?%s" $q -}}
+{{- $chatgpt := printf "https://chatgpt.com/?%s" $q -}}
+{{- $grok := printf "https://grok.com/?%s" $q -}}
+<div class="cod-tldr">
+  <a id="tldr-link" class="cod-tldr__link" href="{{ $claude }}" data-claude="{{ $claude }}" data-chatgpt="{{ $chatgpt }}" data-grok="{{ $grok }}" target="_blank" rel="noopener" title="{{ T "tldrHint" }}">
+    <span class="cod-tldr__icon" aria-hidden="true">✦</span>
+    <span><strong>{{ T "tldrTitle" }}</strong> <span>{{ T "tldrText" }}</span></span>
+  </a>
+  <div id="tldr-menu" class="cod-tldr__menu" hidden role="menu">
+    <a href="{{ $claude }}" role="menuitem" target="_blank" rel="noopener">Claude</a>
+    <a href="{{ $chatgpt }}" role="menuitem" target="_blank" rel="noopener">ChatGPT</a>
+    <a href="{{ $grok }}" role="menuitem" target="_blank" rel="noopener">Grok</a>
+  </div>
+</div>

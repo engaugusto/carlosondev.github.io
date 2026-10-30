@@ -1,0 +1,84 @@
+# mise controls everything: tool versions, the Python venv and every task.
+#   curl https://mise.run | sh     # install mise once (or: brew install mise)
+#   mise install                   # Hugo, Go, Python at the versions below
+#   mise run setup                 # Python deps into .venv
+#   mise run dev                   # http://localhost:1313/en/
+#   mise tasks                     # list everything
+
+min_version = "2025.1.0"
+
+[tools]
+hugo-extended = "0.156.0"
+go = "1.24"
+python = "3.13"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+HUGO_CACHEDIR = "{{config_root}}/.cache/hugo"
+
+# ---------------------------------------------------------------- setup
+[tasks.setup]
+description = "Install Python dependencies into .venv"
+run = "python -m pip install -q --upgrade pip && python -m pip install -q -r requirements.txt"
+
+# ---------------------------------------------------------------- writing
+[tasks.new]
+description = "Create a new post in en/es/pt-br: mise run new \"Post title\" [--slug x] [--lang en,es]"
+run = "python scripts/new_post.py"
+
+[tasks.index]
+description = "Regenerate the home and archive pages for every language"
+run = "python scripts/generate_index.py"
+
+[tasks."tags:search"]
+description = "Find canonical tags before tagging a post: mise run tags:search \"query\""
+run = "python scripts/tag_catalog.py --search"
+
+[tasks."tags:check"]
+description = "Validate tags and descriptions of all published posts"
+run = "python scripts/tag_catalog.py --check"
+
+[tasks."tags:catalog"]
+description = "Rewrite TAGGING.md from data/tag_taxonomy.yml"
+run = "python scripts/tag_catalog.py --write TAGGING.md"
+
+# ---------------------------------------------------------------- running
+[tasks.dev]
+description = "Local server with drafts and future posts (index regenerated without them)"
+depends = ["index"]
+run = "hugo server --buildDrafts --buildFuture --disableFastRender -p 1313"
+
+[tasks."dev:drafts"]
+description = "Local server with drafts ALSO listed on the home page (do not commit the generated _index files)"
+run = [
+  "python scripts/generate_index.py --drafts --future",
+  "hugo server --buildDrafts --buildFuture --disableFastRender -p 1313",
+]
+
+[tasks.build]
+description = "Production build into ./public (uses $DEPLOY_PRIME_URL on Netlify previews)"
+depends = ["tags:check", "index"]
+run = 'hugo --minify ${DEPLOY_PRIME_URL:+--baseURL "$DEPLOY_PRIME_URL/"}'
+
+# ---------------------------------------------------------------- quality
+[tasks.test]
+description = "Build into a temp dir and run the site tests"
+run = "python -m unittest discover -s tests -v"
+
+[tasks."index:check"]
+description = "Fail if the generated _index files are stale (CI)"
+run = "python scripts/generate_index.py --check"
+
+[tasks.check]
+description = "Everything CI runs: tags, generated pages, tests, production build"
+depends = ["tags:check", "index:check", "test"]
+run = "hugo --minify --quiet"
+
+# ---------------------------------------------------------------- theme
+[tasks."theme:update"]
+description = "Update Hextra and re-vendor it into _vendor/"
+run = ["hugo mod get -u github.com/imfing/hextra", "hugo mod tidy", "hugo mod vendor"]
+
+[tasks.clean]
+description = "Remove build output and caches"
+run = "rm -rf public resources/_gen .cache .hugo_build.lock"

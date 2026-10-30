@@ -1,7 +1,19 @@
-# Hugo output
+# Hugo
 public/
-resources/
+resources/_gen/
 .hugo_build.lock
+hugo_stats.json
+.cache/
 
-# Editor
+# Python / mise
+.venv/
+__pycache__/
+*.pyc
+mise.local.toml
+
+# Netlify / editors
+.netlify/
+node_modules/
+.DS_Store
 .vscode/
+.idea/
