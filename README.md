@@ -11,7 +11,7 @@ The structure and workflow follow [akitaonrails/akitaonrails.github.io](https://
 ## Quick start
 
 ```bash
-curl https://mise.run | sh        # or: brew install mise   (once per machine)
+curl https://mise.run | sh        # macOS/Linux (or: brew install mise); Windows: winget install jdx.mise
 git clone https://github.com/engaugusto/carlosondev.github.io.git
 cd carlosondev.github.io
 mise install                      # Hugo extended, Go, Python (versions pinned in mise.toml)

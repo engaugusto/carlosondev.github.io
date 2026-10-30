@@ -1,5 +1,5 @@
 # mise controls everything: tool versions, the Python venv and every task.
-#   curl https://mise.run | sh     # install mise once (or: brew install mise)
+#   curl https://mise.run | sh     # install mise once (macOS/Linux; Windows: winget install jdx.mise)
 #   mise install                   # Hugo, Go, Python at the versions below
 #   mise run setup                 # Python deps into .venv
 #   mise run dev                   # http://localhost:1313/en/
@@ -59,6 +59,7 @@ run = [
 description = "Production build into ./public (uses $DEPLOY_PRIME_URL on Netlify previews)"
 depends = ["tags:check", "index"]
 run = 'hugo --minify ${DEPLOY_PRIME_URL:+--baseURL "$DEPLOY_PRIME_URL/"}'
+run_windows = "hugo --minify"
 
 # ---------------------------------------------------------------- quality
 [tasks.test]
@@ -82,3 +83,4 @@ run = ["hugo mod get -u github.com/imfing/hextra", "hugo mod tidy", "hugo mod ve
 [tasks.clean]
 description = "Remove build output and caches"
 run = "rm -rf public resources/_gen .cache .hugo_build.lock"
+run_windows = "powershell -NoProfile -Command \"Remove-Item -Recurse -Force -ErrorAction SilentlyContinue public, resources/_gen, .cache, .hugo_build.lock\""
