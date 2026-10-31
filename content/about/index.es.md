@@ -1,6 +1,6 @@
 ---
 title: "Sobre mí"
-description: "Carlos Augusto: director de IA en Stefanini, ex ingeniero de pagos y alguien a quien le gusta construir cosas que funcionan en producción."
+description: "Carlos Augusto: director de Ciberseguridad, Infraestructura Cloud y Operaciones en la Global Technology Office de Stefanini, y director de IA y ML. Más de 18 años en TI."
 toc: false
 ---
 
@@ -8,7 +8,7 @@ Hola, soy Carlos Augusto 👋
 
 Ayudo a llevar la IA al mundo real. Es mi titular de LinkedIn y también la forma más corta de explicar lo que hago.
 
-Hoy dirijo Inteligencia Artificial y Machine Learning en Stefanini para Norteamérica y APAC, desde Michigan. Mi trabajo es sacar la IA de las presentaciones y meterla en la operación real: IA generativa y LLMs, automatización de aplicaciones y ERPs como SAP, datos y analítica. Algunos días estoy con clientes dibujando la solución, otros con el equipo construyéndola, y otros soy quien se asegura de que no se rompa.
+Llevo más de 18 años en TI. Hoy, desde Michigan, soy director de Ciberseguridad, Infraestructura Cloud y Operaciones en la Global Technology Office de Stefanini, y también dirijo IA y ML. Mi trabajo es sacar la IA de las presentaciones y meterla en la operación real, sobre una infraestructura segura que no se caiga: IA generativa y LLMs, automatización de aplicaciones y ERPs como SAP, cloud, seguridad, datos y analítica. Trabajo con empresas como Dow Chemical, Toyota North America y otras. Algunos días estoy con clientes dibujando la solución, otros con el equipo construyéndola, y otros soy quien se asegura de que no se rompa.
 
 ## De dónde vengo
 
@@ -18,7 +18,7 @@ Después pasé a consultor y arquitecto de soluciones, y luego a IT manager y ar
 
 En 2020 también me hice socio de una clínica online, donde me encargaba del marketing y la tecnología. Eso me enseñó algo que ningún diagrama de arquitectura enseña: lo que se siente cuando el dinero es tuyo.
 
-En 2022 llegué a Stefanini para liderar IA.
+En 2022 llegué a Stefanini para liderar IA. Hoy también me encargo de la ciberseguridad, la infraestructura cloud y las operaciones en nuestra Global Technology Office.
 
 ## En qué creo
 

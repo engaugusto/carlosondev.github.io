@@ -13,7 +13,7 @@ Hello world! 👋
 
 Every developer writes this line in the first program. So this is my first program for this website.
 
-I'm Carlos Augusto. I live in Michigan and I work with Artificial Intelligence at Stefanini, helping companies take AI out of the slides and put it into real operations. Before that I spent more than ten years in São Paulo building payment systems, leading teams and being the last person to call when something broke in production. Even at 3 a.m.
+I'm Carlos Augusto. I live in Michigan and I lead cybersecurity, cloud infrastructure, operations and AI at Stefanini's Global Technology Office, helping companies take AI out of the slides and put it into real operations. Before that I spent more than ten years in São Paulo building payment systems, leading teams and being the last person to call when something broke in production. Even at 3 a.m.
 
 Why a website now? Because I wanted a place that is mine. LinkedIn is good for a quick post, but some ideas need more space than that, and I want to keep everything I write in one place.
 

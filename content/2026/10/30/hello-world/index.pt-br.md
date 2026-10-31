@@ -13,7 +13,7 @@ Olá, mundo! 👋
 
 Todo desenvolvedor escreve essa linha no primeiro programa. Então este é o meu primeiro programa para este site.
 
-Eu sou o Carlos Augusto. Moro em Michigan e trabalho com Inteligência Artificial na Stefanini, ajudando empresas a tirar a IA dos slides e colocar na operação de verdade. Antes disso passei mais de dez anos em São Paulo construindo sistemas de pagamento, liderando times e sendo a última pessoa a ser chamada quando alguma coisa quebrava em produção. Mesmo às 3 da manhã.
+Eu sou o Carlos Augusto. Moro em Michigan e lidero cibersegurança, infraestrutura cloud, operações e IA no Global Technology Office da Stefanini, ajudando empresas a tirar a IA dos slides e colocar na operação de verdade. Antes disso passei mais de dez anos em São Paulo construindo sistemas de pagamento, liderando times e sendo a última pessoa a ser chamada quando alguma coisa quebrava em produção. Mesmo às 3 da manhã.
 
 Por que um site agora? Porque eu queria um lugar que fosse meu. O LinkedIn é bom pra um post rápido, mas algumas ideias precisam de mais espaço, e eu quero ter tudo o que escrevo num lugar só.
 

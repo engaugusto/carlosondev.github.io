@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-description: "Carlos Augusto: AI director at Stefanini, former payments engineer, and someone who likes to build things that run in production."
+description: "Carlos Augusto: Global Technology Office Director of Cybersecurity, Cloud Infrastructure and Ops, and AI & ML director at Stefanini. 18+ years in IT."
 toc: false
 ---
 
@@ -8,7 +8,7 @@ Hi, I'm Carlos Augusto 👋
 
 I help to bring A.I. to the real world. That's my LinkedIn headline, and it's also the shortest way to explain what I do.
 
-Today I lead Artificial Intelligence and Machine Learning for Stefanini in North America and APAC, from Michigan. My job is to take AI out of the slides and put it inside real operations: generative AI and LLMs, automation for applications and ERPs like SAP, data and analytics. Some days I'm with clients drawing the solution, some days I'm with the team building it, and some days I'm the one making sure it doesn't break.
+I have more than 18 years in IT. Today, from Michigan, I'm Global Technology Office Director of Cybersecurity, Cloud Infrastructure and Ops at Stefanini, and I also lead AI & ML. My job is to take AI out of the slides and put it inside real operations, on top of infrastructure that is secure and doesn't fall down: generative AI and LLMs, automation for applications and ERPs like SAP, cloud, security, data and analytics. I work with companies like Dow Chemical, Toyota North America and others. Some days I'm with clients drawing the solution, some days I'm with the team building it, and some days I'm the one making sure it doesn't break.
 
 ## Where I come from
 
@@ -18,7 +18,7 @@ From there I became a consultant and a solutions architect, and then IT manager 
 
 In 2020 I also became co-owner of an online clinic, where I took care of marketing and technology. That taught me something that no architecture diagram teaches: how it feels when the money is yours.
 
-In 2022 I joined Stefanini to lead AI.
+In 2022 I joined Stefanini to lead AI. Today I also take care of cybersecurity, cloud infrastructure and operations in our Global Technology Office.
 
 ## What I believe
 
