@@ -10,6 +10,8 @@ Ayudo a llevar la IA al mundo real. Es mi titular de LinkedIn y también la form
 
 Llevo más de 18 años en TI. Hoy, desde Michigan, soy director de Ciberseguridad, Infraestructura Cloud y Operaciones en la Global Technology Office de Stefanini, y también dirijo IA y ML. Mi trabajo es sacar la IA de las presentaciones y meterla en la operación real, sobre una infraestructura segura que no se caiga: IA generativa y LLMs, automatización de aplicaciones y ERPs como SAP, cloud, seguridad, datos y analítica. Trabajo con empresas como Dow Chemical, Toyota North America y otras. Algunos días estoy con clientes dibujando la solución, otros con el equipo construyéndola, y otros soy quien se asegura de que no se rompa.
 
+Mi reto ahora en Stefanini es encontrar oportunidades que nacen en un país y convertirlas en ofertas globales, o crear nuevos productos y servicios globales. También ayudo a nuestras regiones a aplicar la IA en su trabajo.
+
 ## De dónde vengo
 
 Empecé como desarrollador de software en São Paulo, trabajando en sistemas de pago para adquirentes y emisores como Rede, Itaú y Alelo. Captura, autorización, procesamiento, liquidación: trabajé en todo el flujo de una transacción con tarjeta durante más de diez años.
@@ -29,7 +31,9 @@ En 2022 llegué a Stefanini para liderar IA. Hoy también me encargo de la ciber
 
 ## Con qué trabajo
 
-LLMs (OpenAI, Gemini, Claude, Llama, Mistral y otros), Python, C# y Java, LangChain, Hugging Face, Spark, Docker y Kubernetes, UiPath y SAP GUI scripting, AWS y Azure. Me gusta seguir con las manos en el código, desde el planteamiento del problema hasta tenerlo funcionando en producción.
+Mi trabajo abarca el desarrollo de software en varios lenguajes, operaciones críticas, servicios de gestión de aplicaciones (AMS) y proyectos de desarrollo de software. En infraestructura, diseño arquitecturas cloud y trabajo con Kubernetes y cuatro proveedores cloud: Azure, AWS, GCP y Huawei Cloud.
+
+Las herramientas que más uso son LLMs (OpenAI, Gemini, Claude, Llama, Mistral y otros), Python, C# y Java, LangChain, Hugging Face, Spark, Docker, UiPath y SAP GUI scripting. Me gusta seguir con las manos en el código, desde el planteamiento del problema hasta tenerlo funcionando en producción.
 
 ## Fuera del trabajo
 
@@ -39,7 +43,8 @@ Estudié Ingeniería Informática e hice un MBA en Dirección de Proyectos.
 
 ## Hablemos
 
-Si quieres hablar de IA, SAP, pagos, construir productos o carrera profesional, escríbeme:
+Si quieres hablar de IA, cloud, SAP, pagos, construir productos o carrera profesional, reserva una reunión o escríbeme:
 
+- Reunión: [elige una hora en mi agenda](https://calendar.app.google/Vd5hnDQdy3nfxEz87)
 - LinkedIn: [linkedin.com/in/caugusto](https://www.linkedin.com/in/caugusto/)
 - GitHub: [github.com/engaugusto](https://github.com/engaugusto)
