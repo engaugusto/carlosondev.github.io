@@ -8,7 +8,7 @@ Hi, I'm Carlos Augusto 👋
 
 I help to bring A.I. to the real world. That's my LinkedIn headline, and it's also the shortest way to explain what I do.
 
-I have more than 18 years in IT. Today, from Michigan, I'm Global Technology Office Director of Cybersecurity, Cloud Infrastructure and Ops at Stefanini, and I also lead AI & ML. My job is to take AI out of the slides and put it inside real operations, on top of infrastructure that is secure and doesn't fall down: generative AI and LLMs, automation for applications and ERPs like SAP, cloud, security, data and analytics. I work with companies like Dow Chemical, Toyota North America and others. Some days I'm with clients drawing the solution, some days I'm with the team building it, and some days I'm the one making sure it doesn't break.
+I have more than 18 years in IT. Today, from Michigan, I'm Global Technology Office Director of Cybersecurity, Cloud Infrastructure and Ops at Stefanini, and I also lead AI & ML. My job is to take AI out of the slides and put it inside real operations, on top of infrastructure that is secure and doesn't fall down: generative AI and LLMs, automation for applications and ERPs like SAP, cloud, security, data and analytics. I mostly work for Stefanini's internal areas and build solutions that are then deployed to clients like Dow Chemical, Toyota North America, Tiffany & Co., PVH, Ferrero and Mastercard. Some days I'm with clients drawing the solution, some days I'm with the team building it, and some days I'm the one making sure it doesn't break.
 
 My challenge at Stefanini right now is to find opportunities that start in one country and turn them into global offers, or to build new global products and services. I also support our regions in applying AI to their work.
 

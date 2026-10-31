@@ -8,7 +8,7 @@ Oi, eu sou o Carlos Augusto 👋
 
 Eu ajudo a levar a IA para o mundo real. Essa é a minha frase no LinkedIn, e também o jeito mais curto de explicar o que eu faço.
 
-Tenho mais de 18 anos de TI. Hoje, aqui de Michigan, sou diretor de Cibersegurança, Infraestrutura Cloud e Operações no Global Technology Office da Stefanini, e também lidero IA e ML. Meu trabalho é tirar a IA dos slides e colocar dentro da operação de verdade, em cima de uma infraestrutura segura que não cai: IA generativa e LLMs, automação de aplicações e ERPs como o SAP, cloud, segurança, dados e analytics. Trabalho com empresas como Dow Chemical, Toyota North America e outras. Tem dia que estou com cliente desenhando a solução, tem dia que estou com o time construindo, e tem dia que sou eu garantindo que nada quebre.
+Tenho mais de 18 anos de TI. Hoje, aqui de Michigan, sou diretor de Cibersegurança, Infraestrutura Cloud e Operações no Global Technology Office da Stefanini, e também lidero IA e ML. Meu trabalho é tirar a IA dos slides e colocar dentro da operação de verdade, em cima de uma infraestrutura segura que não cai: IA generativa e LLMs, automação de aplicações e ERPs como o SAP, cloud, segurança, dados e analytics. Atendo principalmente as áreas internas da Stefanini e crio soluções que depois são implantadas em clientes como Dow Chemical, Toyota North America, Tiffany & Co., PVH, Ferrero e Mastercard. Tem dia que estou com cliente desenhando a solução, tem dia que estou com o time construindo, e tem dia que sou eu garantindo que nada quebre.
 
 Meu desafio hoje na Stefanini é encontrar oportunidades que nascem em um país e transformá-las em ofertas globais, ou criar novos produtos e serviços globais. Também apoio as nossas regiões a aplicar IA no dia a dia delas.
 
