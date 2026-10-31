@@ -19,6 +19,26 @@ mise run setup                    # Python deps into .venv
 mise run dev                      # http://localhost:1313/en/  /es/  /pt-br/
 ```
 
+## Publish a post (the whole flow)
+
+There is no "publish" command: **publishing = `git push`**. Netlify builds the site
+(`mise run build`, which also regenerates the indexes) and publishes `public/` on every
+push to `main`. You never build or upload `public/` yourself, and it is not in git.
+
+```bash
+mise run new "My post title"     # 1. creates the en/es/pt-br files as drafts
+mise run dev                     # 2. write + preview at http://localhost:1313/en/
+                                 #    (set draft: false in all 3 files when ready)
+mise run index                   # 3. update home + archive pages
+mise run check                   # 4. optional: tags, tests, build (same as CI)
+git add .                        # 5. publish
+git commit -m "New post: My post title"
+git push
+```
+
+About 1–2 minutes after the push, the post is live on carlosondev.com. If the build
+fails, Netlify keeps the previous version online and shows the error in its Deploys tab.
+
 `mise tasks` lists everything:
 
 | Task | What it does |
