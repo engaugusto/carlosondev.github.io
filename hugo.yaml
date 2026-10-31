@@ -44,22 +44,25 @@ languages:
       - name: Tags
         pageRef: /tags
         weight: 3
-      - name: Search
+      - name: Book a meeting
+        url: https://calendar.app.google/Vd5hnDQdy3nfxEz87
         weight: 4
+      - name: Search
+        weight: 5
         params:
           type: search
       - name: RSS
-        weight: 5
+        weight: 6
         url: /en/index.xml
         params:
           icon: rss
       - name: GitHub
-        weight: 6
+        weight: 7
         url: https://github.com/engaugusto
         params:
           icon: github
       - name: Language
-        weight: 7
+        weight: 8
         params:
           type: language-switch
   es:
@@ -84,22 +87,25 @@ languages:
       - name: Etiquetas
         pageRef: /tags
         weight: 3
-      - name: Buscar
+      - name: Reservar reunión
+        url: https://calendar.app.google/Vd5hnDQdy3nfxEz87
         weight: 4
+      - name: Buscar
+        weight: 5
         params:
           type: search
       - name: RSS
-        weight: 5
+        weight: 6
         url: /es/index.xml
         params:
           icon: rss
       - name: GitHub
-        weight: 6
+        weight: 7
         url: https://github.com/engaugusto
         params:
           icon: github
       - name: Idioma
-        weight: 7
+        weight: 8
         params:
           type: language-switch
   pt-br:
@@ -124,22 +130,25 @@ languages:
       - name: Tags
         pageRef: /tags
         weight: 3
-      - name: Buscar
+      - name: Agendar reunião
+        url: https://calendar.app.google/Vd5hnDQdy3nfxEz87
         weight: 4
+      - name: Buscar
+        weight: 5
         params:
           type: search
       - name: RSS
-        weight: 5
+        weight: 6
         url: /pt-br/index.xml
         params:
           icon: rss
       - name: GitHub
-        weight: 6
+        weight: 7
         url: https://github.com/engaugusto
         params:
           icon: github
       - name: Idioma
-        weight: 7
+        weight: 8
         params:
           type: language-switch
 
